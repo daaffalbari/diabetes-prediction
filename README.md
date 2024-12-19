@@ -3,7 +3,8 @@
 ## Domain Proyek
 
 Domain proyek ini akan membahas mengenai permasalahan dalam bidang kesehatan yang dibuat untuk mengetahui prediksi status diabetes seseorang.
-![image](https://github.com/daaffalbari/diabetic-prediction/assets/73302268/24909b6b-ca98-4a66-9e3f-9b32aa02645b)
+![diabetes](https://github.com/user-attachments/assets/55bf85eb-76f0-4b07-a334-d8797ce89ded)
+
 
 Diabetes merupakan suatu penyakit tidak menular yang cukup serius di mana pankreas tidak dapat memproduksi insulin secara maksimal [1]. Diabetes dapat menyerang siapa saja tanpa mengenal usia baik lansia, orang dewasa, maupun anak-anak yang ditandai dengan meningkatnya kadar gula (glukosa) dalam tubuh manusia. 
 
@@ -41,9 +42,9 @@ Berdasarkan penjelasan di atas, terdapat beberapa solusi yang dapat dilakukan un
      - Urutkan jarak pada dari kecil ke besar, lalu diambil titik data dengan jarak terkecil dari sejumlah `k` titik.
      - Hitung jumlah titik pada `k` setiap kelas atau kategori.
      - Masukkan data baru ke kelas dengan jumlah `k` terbanyak.
-     
+
      <br>
-     <img src="https://user-images.githubusercontent.com/64983961/188507827-0f729ab6-61a5-4dbc-9be2-afa424f6c294.png" alt="Ilustrasi Algoritma K-Nearest Neighbor" title="Ilustrasi Algoritma K-Nearest Neighbor">
+     <img src="https://github.com/user-attachments/assets/2d02ebde-e6fe-4ee6-b75a-4f2b7af79087" alt="Ilustrasi Algoritma K-Nearest Neighbor" title="Ilustrasi Algoritma K-Nearest Neighbor">
      
      Perhitungan jarak ke tetangga terdekat dapat dilakukan dengan menggunakan metrik sebagai berikut:
      - *Euclidean distance*
@@ -83,14 +84,14 @@ Berdasarkan penjelasan di atas, terdapat beberapa solusi yang dapat dilakukan un
    - **Algoritma Decision Tree**  
     Algoritma decision tree adalah metode dalam ilmu komputer dan statistik yang digunakan dalam pengambilan keputusan dan pembelajaran mesin. Algoritma ini digunakan untuk mengatasi masalah klasifikasi dan regresi. Ini bekerja dengan memecah data menjadi bagian-bagian yang lebih kecil dan lebih mudah dikelola, membentuk struktur pohon keputusan dengan cabang-cabang dan simpul-simpul. Setiap simpul dalam pohon ini mewakili keputusan atau pengujian pada atribut tertentu, dan setiap cabang menggambarkan kemungkinan hasil dari pengujian tersebut.
      
-     ![image](https://github.com/daaffalbari/diabetic-prediction/assets/73302268/28fd01f2-d95d-42be-bb1b-94cb816f0f64)
+     ![image](https://github.com/user-attachments/assets/c986a602-bbda-4026-a993-fe5496099339)
 
 
 ## Data Understanding
 
-<img src="https://github.com/daaffalbari/diabetic-prediction/assets/73302268/eea9b2b1-a7ad-45d0-8d68-30320e348755" alt="Electric Power Consumption Kaggle Dataset" title="Electric Power Consumption Kaggle Dataset" width="100%">
+<img src="https://github.com/user-attachments/assets/0305bd81-9cc0-40f7-84e4-3565943fc7ce" alt="Diabetes " title="Diabetes Prediction Dataset" width="100%">
 
-Data yang digunakan dalam proyek ini adalah *dataset* yang diambil dari Kaggle Dataset [Diabetes Prediction](https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset') dengan kategori *dataset*, yaitu *Health* dan *Classification*. Dalam *dataset* tersebut terdapat sebuah *file* atau berkas dengan nama `diabetes_prediction_dataset.csv` yang berekstensi (*file format*) `.csv` atau [comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values 'Comma-separated values') berukuran 751 KB.
+Data yang digunakan dalam proyek ini adalah *dataset* yang diambil dari Kaggle Dataset [Diabetes Prediction](https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset) dengan kategori *dataset*, yaitu *Health* dan *Classification*. Dalam *dataset* tersebut terdapat sebuah *file* atau berkas dengan nama `diabetes_prediction_dataset.csv` yang berekstensi (*file format*) `.csv` atau [comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values 'Comma-separated values') berukuran 751 KB.
 
 
 Kemudian dilakukan proses *Exploratory Data Analysis* (EDA) sebagai investigasi awal untuk menganalisis karakteristik, menemukan pola, anomali, dan memeriksa asumsi pada data dengan menggunakan teknik statistik dan representasi grafis atau visualisasi.
@@ -141,34 +142,29 @@ Kemudian dilakukan proses *Exploratory Data Analysis* (EDA) sebagai investigasi 
    - Max (Nilai Maksimum): Ini adalah nilai terbesar dalam kolom, menunjukkan batas atas data.
    
 4. **Menangani Missing Value**  
-
-   <img src="https://github.com/daaffalbari/diabetic-prediction/assets/73302268/a4f99c90-d167-4a1c-addc-30742d8c80ea" alt="Menangani Missing Value" title="Menangani Missing Value">
+   <img src="https://github.com/user-attachments/assets/5c26af15-0fe3-4946-bed1-4016808e5289" alt="Menangani Missing Value" title="Menangani Missing Value">
    
    Berdasarkan gambar tersebut, tidak terdapat *missing value*.
    
 5. **Menangani Outliers**  
    *Outliers* merupakan sampel data yang nilainya berada sangat jauh dari cakupan umum data utama yang dapat merusak hasil analisis data. Berikut adalah visualisasi *boxplot* untuk melakukan pengecekan keberadaan *outliers*.
 
-   <img src="https://github.com/daaffalbari/diabetic-prediction/assets/73302268/1f0550a1-96e5-4db1-8402-47e57742831e" alt="Menangani Outliers - Sebelum" title="Menangani Outliers - Sebelum">
+   <img src="https://github.com/user-attachments/assets/1de7f12b-dc4d-407a-b7f1-a774483aa02d" alt="Menangani Outliers - Sebelum" title="Menangani Outliers - Sebelum">
      
    Berdasarkan gambar tersebut, terdapat *outliers* pada fitur `HbA1c`, `blood_glucose_level`, dan `bmi`. Sehingga dilakukan proses pembersihan *outliers* dengan metode Z-Score.
    
-   $$Z_score=(X_mean) / std.devation
-
-   ![image](https://github.com/daaffalbari/diabetic-prediction/assets/73302268/43aead66-8488-4654-8013-2e78d2a84615)
-
-   Untuk penjelasannya bisa dilihat pada gambar di atas.
+   $$Z_score=(X_mean) / std.devation$$
    
 6. **Univariate Analysis**  
    Melakukan proses analisis data *univariate* pada fitur-fitur numerik. Proses analisis ini menggunakan bantuan visualisasi histogram untuk masing-masing fitur numerik.
-
-   <img src="https://github.com/daaffalbari/diabetic-prediction/assets/73302268/6a17eee6-41fb-4e69-869a-260a0df13536" alt="Univariate Analysis" title="Univariate Analysis">
+  
+   <img src="https://github.com/user-attachments/assets/ed1e7aa4-1ab6-47df-aa37-9e11563e0a6f" alt="Univariate Analysis" title="Univariate Analysis">
    
    
-7. **Analisis Korelasi Antar Fitur**  
+8. **Analisis Korelasi Antar Fitur**  
    Melakukan pengecekan korelasi antar fitur numerik dengan menggunakan visualisasi diagram *heatmap* *correlation matrix*.
-   
-   <img src="https://github.com/daaffalbari/diabetic-prediction/assets/73302268/ad2a9a45-c918-493d-81b9-7a64021d43e3" alt="Correlation Matrix with Heatmap" title="Correlation Matrix with Heatmap">
+
+   <img src="https://github.com/user-attachments/assets/88e12693-95f3-4790-9832-4af733a4e9de" alt="Correlation Matrix with Heatmap" title="Correlation Matrix with Heatmap">
    
    Dapat dilihat pada diagram *heatmap* di atas memiliki *range* atau rentang angka dari 1.0 hingga 0.4 dengan keterangan sebagai berikut,
    - Jika semakin mendekati 1, maka korelasi antar fitur numerik semakin kuat bernilai positif.
@@ -181,7 +177,7 @@ Kemudian dilakukan proses *Exploratory Data Analysis* (EDA) sebagai investigasi 
 
 ## Data Preparation
 
-Pada tahap persiapan data atau *data preparation* dilakukan berdasarkan penjelasan yang sudah dipaparkan pada bagian [Solution Statements](#solution-statements "Solution Statements"). Tahap ini penting dilakukan untuk mempersiapkan data sehingga dapat digunakan untuk melatih model *machine learning* dengan baik. Berikut adalah dua tahapan data preparation yang dilakukan, yaitu,
+Pada tahap persiapan data atau *data preparation* dilakukan berdasarkan penjelasan yang sudah dipaparkan pada **Solution Statement**. Tahap ini penting dilakukan untuk mempersiapkan data sehingga dapat digunakan untuk melatih model *machine learning* dengan baik. Berikut adalah dua tahapan data preparation yang dilakukan, yaitu,
 
 1. **Split Data**  
    Pembagian data dilakukan untuk memisahkan data keseluruhan menjadi dua (2) bagian, yaitu data latih (*training data*) dan data uji (*testing data*) dengan perbandingan rasio sebesar 90 : 10 menggunakan `train_test_split`. Alasan membagi kedalam jumlah 90:10 dikarenakan jumlah dataset yang digunakan jumlahnya sudah banyak. Sehingga membagi ke dalam 90 : 10 tidak menjadi masalah.
@@ -279,7 +275,7 @@ Dan untuk hasil mse dari data train dan test adalah sebagai berikut:
 
 Dari data tabel tersebut dapat divisualisasikan pada grafik batang berikut.
 
-<img src="https://github.com/daaffalbari/diabetic-prediction/assets/73302268/7d36cd68-689e-43ef-af66-ad7dd7275dfb" alt="Evaluation Graph" title="Evaluation Graph">
+<img src="https://github.com/user-attachments/assets/08bd85cf-1d1b-4ac0-82d5-784fc668ef91" alt="Evaluation Graph" title="Evaluation Graph">
 
 Dari visualisasi diagram di atas dapat disimpulkan bahwa,
 1. Model RandomForest dengan Tingkat Error Terendah:
